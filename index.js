@@ -1,5 +1,16 @@
 function moneyCoins(money) {
-  // your implementation code here
+  var coins = [1, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000];
+  var output = [];
+  var index = coins.length - 1;
+  while (money > 0) {
+    if (money - coins[index] >= 0) {
+      money -= coins[index];
+      output.push(coins[index]);
+    } else {
+      index--;
+    }
+  }
+  return output;
 }
 
 //driver code
