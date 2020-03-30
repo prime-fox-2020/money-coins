@@ -1,5 +1,14 @@
 function moneyCoins(money) {
   // your implementation code here
+  var counter = [10000,5000,2000,1000,500,200,100,50,20,10,1]
+  var result = []
+  for (var i = 0; i<counter.length; i++){
+    while(money>=counter[i]){
+      result.push(counter[i])
+      money -= counter[i]
+    }
+  }
+  return result
 }
 
 //driver code
