@@ -1,5 +1,15 @@
 function moneyCoins(money) {
-  // your implementation code here
+  let output = [],
+      dictionary = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  
+  for (let i = 0; i < dictionary.length; i++) {
+    while (money >= dictionary[i]) {
+      money -= dictionary[i];
+      output.push(dictionary[i]);
+    }
+  }
+
+  return `output : [ ${output.join(', ')} ]`;
 }
 
 //driver code
