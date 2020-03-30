@@ -1,5 +1,18 @@
 function moneyCoins(money) {
-  // your implementation code here
+  const value = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  let moneys = [];
+
+  let i = 0;
+  while (money > 0) {
+    if (money >= value[i]) {
+      debugger;
+      money -= value[i];
+      moneys.push(value[i]);
+    } else {
+      i++;
+    }
+  }
+  return moneys;
 }
 
 //driver code
@@ -14,3 +27,4 @@ console.log(moneyCoins(37454));
 
 //abaikan code dibawah ini
 module.exports = moneyCoins
+
