@@ -1,5 +1,20 @@
 function moneyCoins(money) {
   // your implementation code here
+  var uang=[10000,5000,2000,1000,500,200,100,50,20,10,1]
+  var res=[]
+  var angka=money
+  for (let i = 0; i < uang.length; i++) {
+      if(angka-uang[i]<0){
+          continue
+      }else {
+          angka-=uang[i]
+      }
+      res.push(uang[i])
+      if(angka-uang[i]>=0){
+          i--
+      }
+  }
+  return res
 }
 
 //driver code
