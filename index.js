@@ -1,5 +1,17 @@
 function moneyCoins(money) {
-  // your implementation code here
+  let coinList = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let result = []
+  let counter = 0
+  while(money !== 0){
+    if(money >= coinList[counter]){
+      result.push(coinList[counter])
+      money -= coinList[counter]
+    }
+    else{
+      counter++
+    }
+  }
+  return result
 }
 
 //driver code
