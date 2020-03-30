@@ -1,4 +1,16 @@
 function moneyCoins(money) {
+  let arr = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  let result = [];
+  while (money > 0){
+      for (let i in arr){
+          if (money - arr[i] >= 0){
+              result.push(arr[i]);
+              money -= arr[i];
+              break;
+          } 
+      }
+  }
+  return result;
   // your implementation code here
 }
 
