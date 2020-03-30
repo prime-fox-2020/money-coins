@@ -1,5 +1,26 @@
 function moneyCoins(money) {
   // your implementation code here
+  var result = []
+  var coins = [
+    10000,
+    5000,
+    2000,
+    500,
+    200,
+    50,
+    20,
+    1
+  ]
+  
+  while (money > 0) {
+    for (let i = 0; i < coins.length; i++) {
+      if (money >= coins[i]) {
+        result.push(coins[i])
+        money -= coins[i]
+      }
+    }
+  }
+  return result
 }
 
 //driver code
