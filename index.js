@@ -1,5 +1,15 @@
 function moneyCoins(money) {
-  // your implementation code here
+  let pecahan = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let res = []
+  for(let a = 0; a < pecahan.length; a++){
+    if(money - pecahan[a] >= 0){
+      money -= pecahan[a]
+      res.push(pecahan[a])
+      a = -1
+    }
+  }
+
+  return res
 }
 
 //driver code
