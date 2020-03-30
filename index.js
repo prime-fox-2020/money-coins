@@ -1,5 +1,19 @@
 function moneyCoins(money) {
   // your implementation code here
+  var recehan=[10000,5000,2000,1000,500,200,100,50,20,10,1]
+    var output=[],x=0
+    while(money>0){
+        if(money>=recehan[x]){
+            money-=recehan[x]
+            output.push(recehan[x])
+        }
+        else{
+            x++
+        }
+        if(x==recehan.length) break
+    }
+    return `Output : ${output}`
+
 }
 
 //driver code
