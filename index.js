@@ -1,54 +1,13 @@
 function moneyCoins(money) {
   let res = []
-  for (let i = 0; i < Infinity; i++) {
-    if(money > 10000){
-      res.push(10000);
-      money %= 10000;
-    }
-    if(money > 5000){
-      res.push(5000);
-      money %= 5000;
-    }
-    if(money > 2000){
-      res.push(2000);
-      money %= 2000;
-    }
-    if(money > 1000){
-      res.push(1000);
-      money %= 1000;
-    }
-    if(money > 500){
-      res.push(500);
-      money %= 500;
-    }
-    if(money > 200){
-      res.push(200);
-      money %= 200;
-    }
-    if(money > 100){
-      res.push(100);
-      money %= 100;
-    }
-    if(money > 50){
-      res.push(50);
-      money %= 50;
-    }
-    if(money > 20){
-      res.push(20);
-      money %= 20;
-    }
-    if(money > 10){
-      res.push(10);
-      money %= 10;
-    }
-    if(money >= 1){
-      res.push(1);
-      money -= 1;
-    }
-    if(money === 0){
-      return res;
-    }
-  }
+  const coins = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1];
+  for (let i = 0; i < coins.length; i++) {
+    while(money >= coins[i]){
+      res.push(coins[i]);
+      money -= coins[i];
+    };
+  };
+  return res;
 }
 
 //driver code
