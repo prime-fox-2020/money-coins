@@ -17,6 +17,7 @@ function moneyCoins(money) {
       if (money >= coins[i]) {
         result.push(coins[i])
         money -= coins[i]
+        break
       }
     }
   }
