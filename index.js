@@ -1,5 +1,14 @@
 function moneyCoins(money) {
   // your implementation code here
+  let pecahan = [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 1]
+  let res = []
+  for(var i = 0; i < pecahan.length; i++) {
+    while (money >= pecahan[i]) {
+      money -= pecahan[i]
+      res.push(pecahan[i])
+    }
+  }
+  return res
 }
 
 //driver code
